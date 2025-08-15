@@ -151,3 +151,156 @@ p {
   height: 3rem; /* adjust space height here */
   width: 100%;
 }
+
+/* ========== GOAL1: Business Retention Page ========== */
+.goal1-page .goal-section {
+  padding: 2em 0;
+}
+
+.goal1-page ul {
+  margin-bottom: 2em;
+  padding-left: 1.5em;
+}
+
+.goal1-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+/* ========== GOAL2: Investment Attraction Page ========== */
+.goal2-page .goal-section {
+  padding: 2em 0;
+}
+
+.goal2-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.goal2-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.goal2-page .card h3 {
+  color: #0d47a1;
+}
+
+/* ========== GOAL3: Workforce Development Page ========== */
+.goal3-page .goal-section {
+  padding: 2em 0;
+}
+
+.goal3-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.goal3-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.goal3-page .card h3 {
+  color: #0d47a1;
+}
+
+/* ========== RESIDENTIAL DEVELOPMENT PAGE ========== */
+.residential-page .residential-section {
+  padding: 2em 0;
+}
+
+.residential-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.residential-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.residential-page .card h3 {
+  color: #2e7d32; /* Green tone to reflect housing theme */
+}
+
+/* ======= COMMERCIAL DEVELOPMENT PAGE ======= */
+.commercial-page .commercial-section {
+  padding: 2em 0;
+}
+
+.commercial-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.commercial-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.commercial-page .card h3 {
+  color: #1565c0; /* Deep blue to reflect business/professional theme */
+}
+
+/* ======= STARTUP SUPPORT PAGE ======= */
+.startups-page .startups-section {
+  padding: 2em 0;
+}
+
+.startups-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.startups-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.startups-page .card h3 {
+  color: #6a1b9a; /* A vibrant purple to represent innovation and creativity */
+}
+
+/* ======= GREEN INITIATIVES PAGE ======= */
+.green-page .green-section {
+  padding: 2em 0;
+}
+
+.green-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.green-page ul li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.green-page .card h3 {
+  color: #388e3c; /* A clean green for environmental tone */
+}
+
+/* ======= CONTACT FORM PAGE ======= */
+.contact-page .contact-info {
+  padding: 2em 0;
+}
+
+.contact-page h2 {
+  margin-top: 2em;
+}
+
+.contact-page ul {
+  padding-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.contact-page ul li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.contact-page iframe {
+  margin-top: 1em;
+  border-radius: 6px;
+}
