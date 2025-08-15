@@ -152,6 +152,75 @@ p {
   width: 100%;
 }
 
+/* ========== OUR MISSION PAGE ========== */
+.mission-page .mission-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mission-page .card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1 1 22%;
+  text-align: center;
+}
+
+.mission-page .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.mission-page .card h3 {
+  margin: 0.5rem 0 0.25rem;
+  color: #003366;
+}
+
+.mission-page .card p {
+  margin-bottom: 0.5rem;
+}
+
+/* ========== COMMITTEE PAGE ========== */
+
+.committee-page .committee-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.committee-page .card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1 1 22%;
+  text-align: center;
+}
+
+.committee-page .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.committee-page .card h3 {
+  margin: 0.5rem 0 0.25rem;
+  color: #003366;
+}
+
+.committee-page .card p {
+  margin-bottom: 0.5rem;
+}
+
 /* ========== GOAL1: Business Retention Page ========== */
 .goal1-page .goal-section {
   padding: 2em 0;
