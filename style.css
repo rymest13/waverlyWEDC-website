@@ -12,11 +12,30 @@ img {
   display: block;
 }
 
+/* === UPDATED BODY BACKGROUND with linear gradient === */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background: #f4f4f4;
   padding-top: 100px; /* Reserve space for sticky nav */
+  
+  background-color: #f4f4f4; /* fallback */
+
+  background-image: 
+    linear-gradient(
+      -45deg,
+      #e0e0e0 0%, 
+      #e0e0e0 30%, 
+      transparent 30%, 
+      transparent 100%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 70%, 
+      #e0e0e0 70%, 
+      #e0e0e0 100%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 /* NAVIGATION BAR */
@@ -153,6 +172,14 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-bottom: 1.5rem;
+}
+
+/* === NEW: Section Divider for horizontal lines between major sections === */
+hr.section-divider {
+  border: none;
+  border-top: 1px solid #cccccc;  /* light gray line */
+  margin: 3rem 0;
+  width: 100%;
 }
 
 /* --- CARDS LAYOUT --- */
@@ -363,8 +390,26 @@ footer {
 /* ========== OUR MISSION PAGE ========== */
 
 body.mission-page {
-  background-color: #fff; /* simpler white bg like index */
+  /* UPDATED: linear gradient background instead of plain white */
+  background-color: #fff; /* fallback */
   padding: 2rem;
+
+  background-image: 
+    linear-gradient(
+      -45deg,
+      #e0e0e0 0%, 
+      #e0e0e0 30%, 
+      transparent 30%, 
+      transparent 100%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 70%, 
+      #e0e0e0 70%, 
+      #e0e0e0 100%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .mission-page .mission-section {
@@ -373,6 +418,14 @@ body.mission-page {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+/* === NEW: Section Divider for horizontal lines between major sections === */
+hr.section-divider {
+  border: none;
+  border-top: 1px solid #cccccc;  /* light gray line */
+  margin: 3rem 0;
+  width: 100%;
 }
 
 .mission-page .card {
@@ -498,6 +551,14 @@ body.committee-page {
 
 .committee-page .card p {
   margin-bottom: 0.5rem;
+}
+
+/* Section Divider */
+.committee-page .section-divider {
+  border: none;
+  border-top: 1px solid #cccccc;  /* light gray line */
+  margin: 3rem 0;
+  width: 100%;
 }
 
 /* ========== SPONSORS & PARTNERS PAGE ========== */
