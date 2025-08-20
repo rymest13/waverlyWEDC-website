@@ -98,22 +98,6 @@ body {
   display: block;
 }
 
-/* --- MENU TOGGLE BUTTON (for mobile) --- */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: #333;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-  color: #0077cc;
-}
-
 /* --- HERO SECTION --- */
 .hero {
   background-image: url('images/hero.jpg'); /* Replace with your image */
@@ -233,6 +217,15 @@ footer {
   margin-top: 3rem;
 }
 
+/* Hide hamburger menu button on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* --- RESPONSIVE STYLES --- */
 @media (max-width: 900px) {
   .card {
@@ -256,69 +249,69 @@ footer {
 
 /* === NEW: Responsive Navbar & Cards for Tablets & Phones === */
 @media (max-width: 768px) {
+  /* Show hamburger button only on mobile */
+  .menu-toggle {
+    display: block;
+    order: 2;               /* Make it appear after the logo */
+    margin-left: auto;      /* Push it to the right */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
   .navbar {
-    flex-direction: row; /* keep row so logo and menu-toggle sit side by side */
+    flex-direction: row;    /* Keep logo and hamburger on one row */
     align-items: center;
     padding: 1rem 1.5rem;
   }
 
-  .menu-toggle {
-    display: block;
+  .navbar .logo {
+    order: 1;               /* Logo stays first */
   }
 
-  /* Hide nav-links by default on mobile */
-  .nav-links {
-    display: none;
+  .navbar ul {
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    background: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 998;
+    gap: 0;
+    display: none; /* Hide nav links by default on mobile */
+    order: 3;     /* Nav links go below */
+    margin-top: 1rem;
   }
 
-  /* Show nav-links when toggled */
+  /* Show nav links when .show class is toggled */
   .nav-links.show {
     display: flex;
   }
 
-  .nav-links li {
+  .navbar ul li {
     width: 100%;
-    border-bottom: 1px solid #ddd;
   }
 
-  .nav-links li a {
+  .navbar ul li a {
     display: block;
-    padding: 1rem 1.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
   }
 
-  /* Dropdown inside mobile menu */
-  .nav-links li .dropdown {
+  /* Dropdown menus hidden by default on mobile */
+  .navbar ul li .dropdown {
     position: static;
     box-shadow: none;
-    background: #f9f9f9;
     display: none;
-    padding-left: 1rem;
   }
 
-  /* Show dropdown on click - for better UX, might need JS */
-  .nav-links li:hover .dropdown,
-  .nav-links li:focus-within .dropdown {
+  /* When parent li has .open, show dropdown */
+  .navbar ul li.open > .dropdown {
     display: block;
   }
 
-  .nav-links .dropdown li {
-    border-bottom: 1px solid #ddd;
+  .navbar ul .dropdown a {
+    padding-left: 2rem;
   }
 
-  .nav-links .dropdown a {
-    padding: 0.75rem 2rem;
-    color: #333;
-  }
-
-  /* Cards stack vertically */
+  /* Cards stacked vertically */
   .cards {
     flex-direction: column;
     gap: 1.5rem;
@@ -333,7 +326,6 @@ footer {
     border-bottom: none;
   }
 
-  /* Adjust hero for smaller height */
   .hero {
     height: auto;
     padding: 4rem 1rem;
