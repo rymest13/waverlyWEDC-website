@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -133,6 +140,7 @@ body {
   max-width: 1100px;
   margin: 3rem auto;
   padding: 0 1rem;
+  width: 100%;
 }
 
 .container h2 {
@@ -145,14 +153,13 @@ body {
 .cards {
   display: flex;
   justify-content: space-between;
-  gap: 0; /* We'll use borders instead of gap for separators */
+  gap: 0;
   margin-top: 1rem;
 }
 
 .card {
   flex: 1;
   padding: 1rem;
-  /* Add some horizontal padding so content doesn't touch borders */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +167,7 @@ body {
 }
 
 .card:not(:last-child) {
-  border-right: 1px solid #ddd; /* light gray vertical separator */
+  border-right: 1px solid #ddd;
 }
 
 .card:hover {
@@ -228,6 +235,79 @@ footer {
 
   .hero p {
     font-size: 1.2rem;
+  }
+}
+
+/* === NEW: Responsive Navbar & Cards for Tablets & Phones === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar ul li .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+
+  .navbar ul li:hover .dropdown {
+    display: block;
+  }
+
+  .navbar ul .dropdown a {
+    padding-left: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card {
+    border-right: none !important;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card:last-child {
+    border-bottom: none;
+  }
+
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Optional: Disable hover on touch devices */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
   }
 }
 
