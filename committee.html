@@ -15,7 +15,12 @@
       <img src="images/seal.png" alt="City Seal" />
       <span>Waverly, NE</span>
     </div>
-    <ul>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <!-- Navigation Links Wrapper -->
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li>
         <a href="#about">About</a>
@@ -162,6 +167,25 @@
   <footer>
     <p>&copy; 2025 Waverly, Nebraska. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Mobile Menu & Dropdown Toggle -->
+  <script>
+    // Toggle mobile menu visibility
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+
+    // Toggle dropdown menus inside mobile menu
+    document.querySelectorAll('.nav-links > li > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const dropdown = link.nextElementSibling;
+        if (dropdown && dropdown.classList.contains('dropdown')) {
+          e.preventDefault(); // Prevent default link action for parent items
+          link.parentElement.classList.toggle('open'); // Toggle open class to show/hide dropdown
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
