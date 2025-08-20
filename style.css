@@ -29,9 +29,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -39,6 +40,8 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .navbar .logo img {
@@ -56,6 +59,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar ul li {
@@ -68,6 +73,7 @@ body {
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar ul li a:hover {
@@ -217,25 +223,20 @@ footer {
   margin-top: 3rem;
 }
 
-/* Hide hamburger menu button on desktop */
+/* === HAMBURGER MENU === */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 1002;
 }
 
 /* --- RESPONSIVE STYLES --- */
 @media (max-width: 900px) {
   .card {
     width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.5rem;
   }
 
   .hero h1 {
@@ -249,38 +250,45 @@ footer {
 
 /* === NEW: Responsive Navbar & Cards for Tablets & Phones === */
 @media (max-width: 768px) {
-  /* Show hamburger button only on mobile */
   .menu-toggle {
     display: block;
-    order: 2;               /* Make it appear after the logo */
-    margin-left: auto;      /* Push it to the right */
+    order: 2;
+    margin-left: auto;
     background: none;
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 1002;
   }
 
   .navbar {
-    flex-direction: row;    /* Keep logo and hamburger on one row */
+    flex-direction: row;
     align-items: center;
     padding: 1rem 1.5rem;
   }
 
   .navbar .logo {
-    order: 1;               /* Logo stays first */
+    order: 1;
   }
 
+  /* ✅ UPDATED: Right-aligned dropdown menu */
   .navbar ul {
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    align-items: flex-end;
+    width: auto;
     gap: 0;
-    display: none; /* Hide nav links by default on mobile */
-    order: 3;     /* Nav links go below */
-    margin-top: 1rem;
+    display: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    z-index: 1001;
   }
 
-  /* Show nav links when .show class is toggled */
   .nav-links.show {
     display: flex;
   }
@@ -293,25 +301,30 @@ footer {
     display: block;
     width: 100%;
     padding: 0.75rem 1rem;
+    text-align: right;
+    white-space: nowrap;
+    max-width: 250px;
   }
 
-  /* Dropdown menus hidden by default on mobile */
+  /* ✅ Dropdowns inside mobile nav */
   .navbar ul li .dropdown {
-    position: static;
-    box-shadow: none;
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #f8f8f8;
+    padding-left: 1rem;
+    box-shadow: none;
+    position: static;
   }
 
-  /* When parent li has .open, show dropdown */
   .navbar ul li.open > .dropdown {
-    display: block;
+    display: flex;
   }
 
   .navbar ul .dropdown a {
     padding-left: 2rem;
   }
 
-  /* Cards stacked vertically */
   .cards {
     flex-direction: column;
     gap: 1.5rem;
