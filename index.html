@@ -19,44 +19,17 @@
     <!-- Mobile Menu Toggle Button -->
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-    <!-- Navigation Links Wrapper -->
+    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="#about">About</a>
-        <ul class="dropdown">
-          <li><a href="mission.html">Our Mission</a></li>
-          <li><a href="committee.html">Committee Members</a></li>
-          <li><a href="sponsors.html">Sponsors & Partners</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#goals">Goals</a>
-        <ul class="dropdown">
-          <li><a href="bretention.html">Business Retention</a></li>
-          <li><a href="invest.html">Investment Attraction</a></li>
-          <li><a href="workforcedev.html">Workforce Development</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#opportunities">Opportunities</a>
-        <ul class="dropdown">
-          <li><a href="residentialdev.html">Residential Development</a></li>
-          <li><a href="commercialdev.html">Commercial Development</a></li>
-          <li><a href="startups.html">Startup Support</a></li>
-          <li><a href="green.html">Green Initiatives</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-        <ul class="dropdown">
-          <li><a href="form.html">Contact Form</a></li>
-          <li><a href="donations.html">Donations</a></li>
-        </ul>
-      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="opportunities.html">Opportunities</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  
+
   <!-- HERO SECTION BELOW NAVIGATION -->
   <header class="hero">
     <div class="overlay">
@@ -65,19 +38,26 @@
     </div>
   </header>
 
-  <!-- Divider -->
-  <hr class="section-divider">
-
   <!-- CONTENT SECTIONS -->
+
+  <!-- ABOUT SECTION -->
   <section id="about" class="container">
-    <h2>About Us</h2>
-    <p>The Waverly Economic Development Corporation (WEDC) of Waverly Nebraska is committed to fostering sustainable economic growth, attracting investment, and supporting local businesses through strategic initiatives and partnerships.</p>
+    <div class="overlay">
+      <h2>About Us</h2>
+      <p>The Waverly Economic Development Corporation (WEDC) of Waverly Nebraska is committed to fostering sustainable economic growth, attracting investment, and supporting local businesses through strategic initiatives and partnerships.</p>
+    </div>
   </section>
 
-  <!-- Divider -->
-  <hr class="section-divider">
+  <!-- ⭐ Horizontal Line with Stars ⭐ -->
+  <div class="section-divider-with-stars">
+    <hr>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <hr>
+  </div>
 
-  <!-- GOALS SECTION -->
+  <!-- STRATEGIC GOALS SECTION -->
   <section id="goals" class="container">
     <h2>Our Strategic Goals</h2>
     <div class="cards">
@@ -99,10 +79,16 @@
     </div>
   </section>
 
-  <!-- Divider -->
-  <hr class="section-divider">
+  <!-- ⭐ Horizontal Line with Stars ⭐ -->
+  <div class="section-divider-with-stars">
+    <hr>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <hr>
+  </div>
 
-  <!-- OPPORTUNITITES SECTION -->
+  <!-- BUSINESS OPPORTUNITIES SECTION -->
   <section id="opportunities" class="container">
     <h2>Business Opportunities</h2>
     <div class="cards">
@@ -124,18 +110,26 @@
     </div>
   </section>
 
-  <!-- Divider -->
-  <hr class="section-divider">
+  <!-- ⭐ Horizontal Line with Stars ⭐ -->
+  <div class="section-divider-with-stars">
+    <hr>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <hr>
+  </div>
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="container">
-    <h2>Contact Us</h2>
-    <p>
-      Waverly Economic Development Corporation<br />
-      14130 Lancashire Street, Waverly, NE 68462<br />
-      Email: <a href="mailto:econdev@waverly.gov">econdev@waverly.gov</a><br />
-      Phone: (555) 123-4567
-    </p>
+    <div class="overlay">
+      <h2>Contact Us</h2>
+      <p>
+        Waverly Economic Development Corporation<br />
+        14130 Lancashire Street, Waverly, NE 68462<br />
+        Email: <a href="mailto:econdev@waverly.gov">econdev@waverly.gov</a><br />
+        Phone: (555) 123-4567
+      </p>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -143,22 +137,11 @@
     <p>&copy; 2025 Waverly, Nebraska. All rights reserved.</p>
   </footer>
 
-    <!-- JavaScript for Mobile Menu & Dropdown Toggle -->
+  <!-- JavaScript for Mobile Menu & Dropdown Toggle -->
   <script>
     // Toggle mobile menu visibility
     document.querySelector('.menu-toggle').addEventListener('click', function () {
       document.querySelector('.nav-links').classList.toggle('show');
-    });
-
-    // Toggle dropdown menus inside mobile menu
-    document.querySelectorAll('.nav-links > li > a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const dropdown = link.nextElementSibling;
-        if (dropdown && dropdown.classList.contains('dropdown')) {
-          e.preventDefault(); // Prevent default link action for parent items
-          link.parentElement.classList.toggle('open'); // Toggle open class to show/hide dropdown
-        }
-      });
     });
   </script>
 

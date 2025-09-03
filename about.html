@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Waverly Nebraska Economic Development Corporation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="about-page">
+
+  <!-- NAVIGATION WITH LOGO AND MENU -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/seal.png" alt="City Seal" />
+      <span>Waverly, NE</span>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="opportunities.html">Opportunities</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" style="height: 30vh;">
+    <div class="overlay">
+      <h1>About Us</h1>
+      <p>Learn more about the Waverly Economic Development Corporation</p>
+    </div>
+  </header>
+
+  <!-- ABOUT CONTENT -->
+  <section id="about" class="container">
+    <div class="overlay">
+      <h2>Our Mission</h2>
+      <p>The Waverly Economic Development Corporation (WEDC) is committed to fostering sustainable economic growth, attracting investment, and supporting local businesses through strategic initiatives and partnerships.</p>
+
+    <!-- ⭐ Horizontal Line with Stars ⭐ -->
+    <div class="section-divider-with-stars">
+      <hr>
+      <span>★</span>
+      <span>★</span>
+      <span>★</span>
+      <hr>
+    </div>
+
+      <h2>Our Vision</h2>
+      <p>We envision Waverly as a thriving community where businesses prosper, residents flourish, and the local economy grows responsibly and sustainably.</p>
+
+    <!-- ⭐ Horizontal Line with Stars ⭐ -->
+    <div class="section-divider-with-stars">
+      <hr>
+      <span>★</span>
+      <span>★</span>
+      <span>★</span>
+      <hr>
+    </div>
+
+      <h2>Our Team</h2>
+      <p>Our dedicated team works closely with the city, business leaders, and community partners to implement programs that drive economic development, support startups, and create new opportunities for all.</p>
+    </div>
+  </section>
+
+  <!-- ⭐ Horizontal Line with Stars ⭐ -->
+    <div class="section-divider-with-stars">
+      <hr>
+      <span>★</span>
+      <span>★</span>
+      <span>★</span>
+      <hr>
+    </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container">
+    <div class="overlay">
+      <h2>Contact Us</h2>
+      <p>
+        Waverly Economic Development Corporation<br />
+        14130 Lancashire Street, Waverly, NE 68462<br />
+        Email: <a href="mailto:econdev@waverly.gov">econdev@waverly.gov</a><br />
+        Phone: (555) 123-4567
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Waverly, Nebraska. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+
+    // Dropdown toggles
+    document.querySelectorAll('.nav-links > li > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const dropdown = link.nextElementSibling;
+        if (dropdown && dropdown.classList.contains('dropdown')) {
+          e.preventDefault();
+          link.parentElement.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
