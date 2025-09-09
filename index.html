@@ -4,25 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Waverly Nebraska | Economic Development Corporation</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Link to index-only CSS -->
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVIGATION WITH LOGO AND MENU -->
+  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="logo">
-      <img src="images/seal.png" alt="City Seal" />
-      <span>Waverly, NE</span>
+      <img src="images/waverlylogo.jpg" alt="City Seal" />
+      <!--<span>Waverly, NE</span>-->
     </div>
-
-    <!-- Mobile Menu Toggle Button -->
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
-    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="staff.html">Board of Directors</a></li>
       <li><a href="busdev.html">Business Development</a></li>
       <li><a href="opportunities.html">Data</a></li>
       <li><a href="education.html">Education</a></li>
@@ -31,106 +32,107 @@
     </ul>
   </nav>
 
-  <!-- HERO SECTION BELOW NAVIGATION -->
+  <!-- HERO -->
   <header class="hero">
     <div class="overlay">
-      <h1>Waverly</h1>
-      <p>Economic Development Corporation</p>
+      <h1>Waverly Nebraska</h1>
+      <p>Waverly Economic Development Corporation</p>
     </div>
   </header>
 
-  <!-- CONTENT SECTIONS -->
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="container">
-    <div class="overlay">
-      <h2>About Us</h2>
-      <p>The Waverly Economic Development Corporation (WEDC) of Waverly Nebraska is committed to fostering sustainable economic growth, attracting investment, and supporting local businesses through strategic initiatives and partnerships.</p>
-    </div>
-  </section>
-
-  <!-- ⭐ Horizontal Line with Stars ⭐ -->
-  <div class="section-divider-with-stars">
-    <hr>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <hr>
-  </div>
-
-  <!-- STRATEGIC GOALS SECTION -->
-  <section id="goals" class="container">
-    <h2>Our Strategic Goals</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/smallbusiness.jpg" alt="Small business front">
-        <h3>Business Retention</h3>
-        <p>We support local businesses with resources and incentives to grow and thrive.</p>
+  <!-- OUR MISSION SECTION -->
+  <section id="mission" class="overlay">
+    <div class="mission-content">
+      <!-- Left side: Header -->
+      <div class="mission-title">
+        <h2>Our Mission</h2>
       </div>
-      <div class="card">
-        <img src="images/historicdowntown.jpg" alt="Historic downtown">
-        <h3>Investment Attraction</h3>
-        <p>We promote Waverly as a destination for commercial and sustainable investment.</p>
-      </div>
-      <div class="card">
-        <img src="images/communityevent.jpg" alt="Community event">
-        <h3>Workforce Development</h3>
-        <p>We work with educational institutions to build a skilled and future-ready workforce.</p>
+
+      <!-- Right side: Mission text -->
+      <div class="mission-text">
+        <p>
+        The Waverly Economic Development Corporation (WEDC) of Waverly Nebraska 
+        is committed to fostering sustainable economic growth, attracting investment, 
+        and supporting local businesses through strategic initiatives and partnerships.
+        </p>
+        <p>
+        We focus on creating opportunities for local entrepreneurs, supporting workforce 
+        development, and ensuring a vibrant, thriving community for residents and businesses alike.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ⭐ Horizontal Line with Stars ⭐ -->
-  <div class="section-divider-with-stars">
-    <hr>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <hr>
-  </div>
+  <!-- METRICS SECTION -->
+  <section id="metrics" class="overlay">
+    <h2>Growth Highlights</h2>
+    <div class="metrics-content">
+      <ul>
+        <li>
+          <span class="metric-number">4,500</span>
+          <span class="metric-label">Waverly Population</span>
+        </li>
+        <li>
+          <span class="metric-number">345,357</span>
+          <span class="metric-label">20 Mile Radius Population</span>
+        </li>
+        <li>
+          <span class="metric-number">529,574</span>
+          <span class="metric-label">30 Mile Radius Population</span>
+        </li>
+        <li>
+          <span class="metric-number">53,995</span>
+          <span class="metric-label">Annual Average Daily Traffic</span>
+        </li>
+        <li>
+          <span class="metric-number">50+</span>
+          <span class="metric-label">Local Businesses Supported</span>
+        </li>
+        <li>
+          <span class="metric-number">10M+</span>
+          <span class="metric-label">Investment Secured (Past 5 Years)</span>
+        </li>
+        <li>
+          <span class="metric-number">20%</span>
+          <span class="metric-label">Increase in Local Jobs Since 2020</span>
+        </li>
+        <li>
+          <span class="metric-number">8</span>
+          <span class="metric-label">Strategic Initiatives Annually</span>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- BUSINESS OPPORTUNITIES SECTION -->
-  <section id="opportunities" class="container">
-    <h2>Business Opportunities</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/mainstreet.jpg" alt="Main street view">
-        <h3>Real Estate</h3>
-        <p>Explore commercial sites and spaces ready for development.</p>
+  <!-- OUR GOALS SECTION -->
+  <section id="goals" class="overlay">
+    <div class="goals-content">
+      <!-- Left side: Header -->
+      <div class="goals-title">
+        <h2>Our Goals</h2>
       </div>
-      <div class="card">
-        <img src="images/farmersmarket.jpg" alt="Farmers market">
-        <h3>Startup Support</h3>
-        <p>Incentives and programs for entrepreneurs and small businesses.</p>
-      </div>
-      <div class="card">
-        <img src="images/greenspace.jpg" alt="Green park space">
-        <h3>Green Initiatives</h3>
-        <p>Partner with us on eco-friendly projects that benefit the community.</p>
+
+      <!-- Right side: Goals list -->
+      <div class="goals-list">
+        <ul>
+          <li>Attract and retain diverse industries to strengthen the local economy.</li>
+          <li>Support workforce development through education and training partnerships.</li>
+          <li>Promote sustainable growth and community-focused development.</li>
+          <li>Enhance quality of life for residents through infrastructure and innovation.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ⭐ Horizontal Line with Stars ⭐ -->
-  <div class="section-divider-with-stars">
-    <hr>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <hr>
-  </div>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="container">
-    <div class="overlay">
-      <h2>Contact Us</h2>
-      <p>
-        Waverly Economic Development Corporation<br />
-        14130 Lancashire Street, Waverly, NE 68462<br />
-        Email: <a href="mailto:econdev@waverly.gov">econdev@waverly.gov</a><br />
-        Phone: (555) 123-4567
-      </p>
-    </div>
+  <!-- CONTACT -->
+  <section id="contact" class="overlay">
+    <h2>Contact Us</h2>
+    <p>
+      Waverly Economic Development Corporation<br />
+      14130 Lancashire Street, Waverly, NE 68462<br />
+      Email: <a href="mailto:econdev@waverly.gov">econdev@waverly.gov</a><br />
+      Phone: (555) 123-4567
+    </p>
   </section>
 
   <!-- FOOTER -->
@@ -138,13 +140,14 @@
     <p>&copy; 2025 Waverly, Nebraska. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Mobile Menu & Dropdown Toggle -->
   <script>
-    // Toggle mobile menu visibility
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-      document.querySelector('.nav-links').classList.toggle('show');
-    });
-  </script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.navbar ul');
 
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    menuToggle.classList.toggle('open'); // animate hamburger to X
+  });
+  </script>
 </body>
 </html>
